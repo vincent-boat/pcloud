@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+   <head>
+       <meta charset="UTF-8">
+       <meta http-equiv="X-UA-Compatible" content="IE=edge">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- 引入 Bootstrap -->
+      <link rel="stylesheet" href="../static/css/bootstrap.min.css" >
+      <title>私有云·注册页面</title>
+       <meta name="description" content="">
+       <meta name="author" content="">
+
+    <style>
+        body{
+            background-color: #ccc;
+        }
+        .naver{
+            height:90px;
+            background-color: 	#303030;
+        }
+        .fontcol{
+              color: #ccc;
+              margin:20px 50px;
+        }
+        .form-group{
+            width: 250px;
+            margin:25px auto;
+
+        }
+        .btn{
+            width: 250px;
+        }
+
+    </style>
+
+   </head>
+   <body>
+    <nav class="naver">
+    <div class="navbar">
+        <h1 class="nav-top" ><p class="fontcol">注册 <small>V1.0.0</small></p> </h1>
+    </div>
+    </nav>
+    <div class="formg">
+    <form method="post" >
+
+        <div class="form-group">
+            <input type="text" class="form-control ipt" id="username" placeholder="请输入用户名" name="username">
+        </div>
+
+        <div class="form-group">
+            <input type="password" class="form-control" id="password" placeholder="请输入密码" name="password">
+        </div>
+
+        <div class="form-group">
+            <input type="password" class="form-control" id="password2" placeholder="请重复密码" name="password2">
+        </div>
+
+        <div class="form-group">
+            <input type="text" class="form-control" id="nickname" placeholder="创建昵称" name="nickname">
+        </div>
+
+        <div class="form-group">
+            <input type="text" class="form-control" id="gender" placeholder="性别" name="gender">
+        </div>
+
+        <div class="form-group">
+            <input type="email" class="form-control" id="email" placeholder="邮箱" name="email">
+        </div>
+
+        <div class="form-group">
+            <input type="text" class="form-control" id="career" placeholder="职业" name="career">
+        </div>
+
+
+        <div class="form-group">
+        <button type="submit" class="btn btn-primary btn-lg active">注册</button>
+        </div>
+        <div class="form-group">
+        <button type="button" class="btn btn-primary btn-lg active" id="btnlog">返回登录界面</button>
+        </div>
+
+    </form>
+    </div>
+    <script>
+
+        var btnlog = document.getElementById('btnlog')
+        btnlog.onclick = function(){
+            window.location.href="/"
+        }
+    </script>
+
+
+      <!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
+      <script src="../static/js/jquery-3.4.1.min.js"></script>
+      <!-- 包括所有已编译的插件 -->
+      <script src="../static/js/bootstrap.min.js"></script>
+   </body>
+</html>

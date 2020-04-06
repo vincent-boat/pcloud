@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+   <head>
+       <meta charset="UTF-8">
+       <meta http-equiv="X-UA-Compatible" content="IE=edge">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- 引入 Bootstrap -->
+      <link rel="stylesheet" href="../static/css/bootstrap.min.css" >
+      <!-- 导入axios -->
+      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+      <title>测试页面</title>
+       <meta name="description" content="">
+       <meta name="author" content="">
+       <!-- 导入vue -->
+      <script src="../static/js/vue.js"></script>
+
+   </head>
+   <body>
+    <input type="text" id="test" v-model="username" @keyup.enter="confirm" placeholder="username">
+
+
+    <script>
+        var app = new Vue({
+            el:"#test",
+            data:{
+                username:'',
+            },
+            methods: {
+                confirm:function(){
+                    console.log('用户名查询');
+                    console.log(this.username);
+                    axios.get('http://127.0.0.1:5000/test?username='+this.username)
+                    .then(function(response){
+
+                        console.log(response.data.data)
+
+                        if (response.data.data == false){
+                            alert("用户名已存在")
+                        }
+                    })
+
+                    .catch(function(err){
+
+                    })
+                }
+            },
+        })
+    </script>
+
+
+     
+    
+    
+    
+    
+    
+    <!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
+      <script src="../static/js/jquery-3.4.1.min.js"></script>
+      <!-- 包括所有已编译的插件 -->
+      <script src="../static/js/bootstrap.min.js"></script>
+      
+   </body>
+</html>
